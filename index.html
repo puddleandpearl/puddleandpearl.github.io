@@ -111,6 +111,12 @@ footer li{margin-bottom:6px}
   section{padding:80px 0}
 }
 </style>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2750775');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -256,17 +262,8 @@ footer li{margin-bottom:6px}
       <p class="eyebrow">Founder Box waitlist</p>
       <h2>Be first in line for the 25.</h2>
       <p class="lede" style="margin:0 auto">Waitlist members hear first when Founder Boxes open, before anyone else.</p>
-      <!--
-        TODO: replace action="TODO_FORM_ACTION_URL" with the free email provider's form endpoint
-        (e.g., Kit/ConvertKit free form URL, or MailerLite free embedded form), and rename the
-        input names to match that provider's fields. Not connected to anything yet.
-      -->
-      <form id="waitlist-form" action="TODO_FORM_ACTION_URL" method="post" data-todo="true">
-        <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" aria-label="First name">
-        <input type="email" name="email_address" placeholder="Your email" autocomplete="email" required aria-label="Email address">
-        <button class="btn btn-primary" type="submit">Join the Founder Box waitlist</button>
-      </form>
-      <p class="formnote" id="formnote">Draft preview: this form isn't connected yet.</p>
+      
+      <div class="ml-embedded" data-form="u9P5Mk"></div>
       <p class="consent">By joining, you agree to get emails from Puddle &amp; Pearl about the Founder Box and new scents. Unsubscribe anytime.</p>
     </div>
   </div>
@@ -282,7 +279,7 @@ footer li{margin-bottom:6px}
     <details><summary>What's in them? Any nut allergens?</summary><p>Full ingredient lists are below and printed on every product. Puddle and Pearl bombs contain <strong>sweet almond oil (a tree nut oil)</strong> and shea butter. If anyone in your home has a tree nut allergy, please don't use them.</p></details>
     <details><summary>When will my box ship?</summary><p>Pre-orders close Friday, November 13, and every Founder Box ships by Monday, November 23. If anything changes, we'll email you right away and you can choose a full refund.</p></details>
     <details><summary>What if I don't love it?</summary><p>Our Love-It Guarantee means we'll replace your box or refund you.</p></details>
-    <details><summary>Shipping cost? Local pickup?</summary><p>Shipping: <span class="todo">TODO: shipping cost or "Free shipping" (fill in after test ship)</span>. Local pickup in Parker, CO: <span class="todo">TODO: yes/no</span>.</p></details>
+    <details><summary>Shipping cost? Local pickup?</summary><p>Shipping and local pickup details are coming soon. Waitlist members hear first.</p></details>
   </div>
 </section>
 
@@ -328,27 +325,16 @@ footer li{margin-bottom:6px}
       </div>
       <div>
         <h3>Mail</h3>
-        <p><span class="todo">TODO: mailing address (PO Box)</span></p>
+        
       </div>
     </div>
     <div class="legal">
-      © 2026 Puddle &amp; Pearl · Hand-made in Parker, Colorado · hello@puddleandpearl.com · <span class="todo">TODO: mailing address</span><br>
+      © 2026 Puddle &amp; Pearl · Hand-made in Parker, Colorado · hello@puddleandpearl.com<br>
       Our products are cosmetics, made for a lovely bath. They are not intended to diagnose, treat, cure or prevent any disease.
     </div>
   </div>
 </footer>
 
-<script>
-// Draft-only guard: while the form action is still a TODO placeholder, don't submit anywhere.
-(function(){
-  var f=document.getElementById('waitlist-form');
-  f.addEventListener('submit',function(e){
-    if(f.getAttribute('action').indexOf('TODO')===0){
-      e.preventDefault();
-      document.getElementById('formnote').style.display='block';
-    }
-  });
-})();
-</script>
+
 </body>
 </html>
